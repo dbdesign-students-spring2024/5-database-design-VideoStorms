@@ -41,4 +41,14 @@ The original dataset is not compliant with the Fourth Normal Form (4NF) due to t
 
 ## Assignment Table
 
-| Assignment ID | Course ID | Professor ID | Classroom ID | Due Date | Assignment Topic        | Relevant Reading     
+| Assignment ID | Course ID | Professor ID | Classroom ID | Due Date | Assignment Topic        | Relevant Reading      |
+|---------------|-----------|--------------|--------------|----------|-------------------------|-----------------------|
+| A1            | C1        | P1           | R1           | 23.02.21 | Data normalization      | Deumlich Chapter 3    |
+| A2            | C2        | P2           | R2           | 18.11.21 | Single table queries    | Dümmlers Chapter 11   |
+
+## Student Assignment Grade Table
+
+| Student ID | Assignment ID | Grade |
+|------------|---------------|-------|
+| S1         | A1            | 80    |
+| S2         | A2            | 92    |
