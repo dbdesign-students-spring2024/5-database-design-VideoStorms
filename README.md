@@ -14,9 +14,17 @@ The contents of this file will be deleted and replaced with the content describe
 
 
 
-## 4NF Non-Compliance Explanation
+## Non-Compliance with Normal Forms
 
-The original dataset is not compliant with the Fourth Normal Form (4NF) due to the presence of multi-valued dependencies. Specifically, a single course can have multiple assignments, and each assignment can be associated with multiple students, grades, and relevant readings. These relationships create multi-valued dependencies, as the assignment topics, grades, and readings are dependent on the combination of student and course, rather than on any single key. Additionally, the same professor might give different assignments with varying due dates and readings to different sections of the same course, introducing further multi-valued dependencies.
+### 2NF Non-Compliance:
+The original dataset's compliance with 2NF is contingent upon the identification of a composite key. Assuming a combination of `assignment_id` and `student_id` could serve as such, the dataset does not exhibit clear partial dependencies, which are typical indicators of 2NF violation. However, the lack of an explicit composite key in the given structure means this dataset's alignment with 2NF remains largely theoretical.
+
+### 3NF Non-Compliance:
+The dataset likely violates 3NF due to transitive dependencies present. Specifically, attributes such as `professor_email` are dependent on `professor`, which in turn is dependent on `assignment_id`, illustrating a classic transitive dependency scenario. This undermines the requirement that all non-key attributes must be directly dependent on the primary key alone, without any intermediary attributes.
+
+### 4NF Non-Compliance:
+The dataset displays multi-valued dependencies, notably between assignments and readings, and between professors and assignments. These dependencies are independent of each other and do not rely on a singular primary key, contravening the core stipulation of 4NF that mandates the absence of non-trivial multi-valued dependencies in the table structure.
+
 
 ## Course Table
 
