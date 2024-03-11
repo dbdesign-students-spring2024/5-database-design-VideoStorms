@@ -87,13 +87,14 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 ### Assignment Table
 
-| Assignment_ID | Assignment_Topic                   | Due_Date | Section ID|
-|---------------|------------------------------------|----------|           |
-| 1             | Data normalization                 | 23.02.21 | ...       |
-| 2             | Single table queries               | 18.11.21 |           |
-| 4             | Spreadsheet aggregate functions    | 04.07.21 |           |
-| 5             | Python and pandas                  | 05.05.21 |           |
-| ...           | ...                                | ...      |           |
+| Assignment_ID | Assignment_Topic                   | Due_Date | Section_ID |
+|---------------|------------------------------------|----------|------------|
+| 1             | Data normalization                 | 23.02.21 | ...        |
+| 2             | Single table queries               | 18.11.21 | ...        |
+| 4             | Spreadsheet aggregate functions    | 04.07.21 | ...        |
+| 5             | Python and pandas                  | 05.05.21 | ...        |
+| ...           | ...                                | ...      | ...        |
+
 
 ### Student_Assignment Table
 
