@@ -58,21 +58,22 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 ### Section Table
 
-
-
-| Section_ID | Professor_ID | Course_ID |
-|------------|--------------|-----------|
-| ...        | ...          | ...       |
+| Section_ID | Professor_ID | Course_ID | Classroom_ID |
+|------------|--------------|-----------|--------------|
+| 1          | 1            | 1         | 1            |
+| 2          | 1            | 1         | 2            |
+| 3          | 2            | 2         | 3            |
+| ...        | ...          | ...       | ...          |
 
 ### Classroom Table
 
+| Classroom_ID | Classroom_Name |
+|--------------|----------------|
+| 1            | WWH 101        |
+| 2            | 60FA 314       |
+| 3            | WWH 201        |
+| ...          | ...            |
 
-| Classroom_ID | Classroom_Name | Section_ID |
-|--------------|----------------|------------|
-| 1            | WWH 101        | ...        |
-| 2            | 60FA 314       | ...        |
-| 3            | WWH 201        | ...        |
-| ...          | ...            | ...        |
 
 ### Reading Table
 
