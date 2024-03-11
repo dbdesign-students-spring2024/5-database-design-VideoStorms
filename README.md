@@ -26,37 +26,80 @@ The dataset likely violates 3NF due to transitive dependencies present. Specific
 The dataset displays multi-valued dependencies, notably between assignments and readings, and between professors and assignments. These dependencies are independent of each other and do not rely on a singular primary key, contravening the core stipulation of 4NF that mandates the absence of non-trivial multi-valued dependencies in the table structure.
 
 
-## Course Table
+### Student Table
 
-| Course ID | Course Name       |
-|-----------|-------------------|
-| C1        | Database Systems  |
-| C2        | Data Analysis     |
+| Student_ID |
+|------------|
+| 1          |
+| 2          |
+| 4          |
+| 7          |
+| ...        |
 
-## Professor Table
+### Professor Table
 
-| Professor ID | Professor Name | Professor Email    |
-|--------------|----------------|--------------------|
-| P1           | Melvin         | l.melvin@foo.edu   |
-| P2           | Logston        | e.logston@foo.edu  |
+| Professor_ID | Professor_Name | Professor_Email      |
+|--------------|----------------|----------------------|
+| 1            | Melvin         | l.melvin@foo.edu     |
+| 2            | Logston        | e.logston@foo.edu    |
+| 3            | Nevarez        | i.nevarez@foo.edu    |
+| ...          | ...            | ...                  |
 
-## Classroom Table
+### Course Table
 
-| Classroom ID | Classroom Name |
-|--------------|----------------|
-| R1           | WWH 101        |
-| R2           | 60FA 314       |
 
-## Assignment Table
 
-| Assignment ID | Course ID | Professor ID | Classroom ID | Due Date | Assignment Topic        | Relevant Reading      |
-|---------------|-----------|--------------|--------------|----------|-------------------------|-----------------------|
-| A1            | C1        | P1           | R1           | 23.02.21 | Data normalization      | Deumlich Chapter 3    |
-| A2            | C2        | P2           | R2           | 18.11.21 | Single table queries    | Dümmlers Chapter 11   |
+| Course_ID | Course_Name |
+|-----------|-------------|
+| ...       | ...         |
 
-## Student Assignment Grade Table
+### Section Table
 
-| Student ID | Assignment ID | Grade |
-|------------|---------------|-------|
-| S1         | A1            | 80    |
-| S2         | A2            | 92    |
+
+
+| Section_ID | Professor_ID | Course_ID |
+|------------|--------------|-----------|
+| ...        | ...          | ...       |
+
+### Classroom Table
+
+
+| Classroom_ID | Classroom_Name | Section_ID |
+|--------------|----------------|------------|
+| 1            | WWH 101        | ...        |
+| 2            | 60FA 314       | ...        |
+| 3            | WWH 201        | ...        |
+| ...          | ...            | ...        |
+
+### Reading Table
+
+|### Reading Table
+
+| Reading_ID | Title                  | Assignment_ID |
+|------------|------------------------|---------------|
+| 1          | Deumlich Chapter 3     | 1             |
+| 2          | Dümmlers Chapter 11    | 2             |
+| 3          | Dümmlers Chapter 14    | 5             |
+| 4          | Zehnder Page 87        | 4             |
+| ...        | ...                    | ...           |
+
+### Assignment Table
+
+| Assignment_ID | Assignment_Topic                   | Due_Date |
+|---------------|------------------------------------|----------|
+| 1             | Data normalization                 | 23.02.21 |
+| 2             | Single table queries               | 18.11.21 |
+| 4             | Spreadsheet aggregate functions    | 04.07.21 |
+| 5             | Python and pandas                  | 05.05.21 |
+| ...           | ...                                | ...      |
+
+### Student_Assignment Table
+
+| Student_ID | Assignment_ID | Student_Assignment_Grade |
+|------------|---------------|--------------------------|
+| 1          | 1             | 80                       |
+| 7          | 2             | 25                       |
+| 4          | 1             | 75                       |
+| 2          | 5             | 92                       |
+| 2          | 4             | 65                       |
+| ...        | ...           | ...                      |
