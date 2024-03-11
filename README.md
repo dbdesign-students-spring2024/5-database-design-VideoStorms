@@ -4,6 +4,8 @@ An assignment to normalize the structure of data and establish a set of Entity-R
 
 The contents of this file will be deleted and replaced with the content described in the [instructions](./instructions.md)
 
+## Table containing the original data set
+
 | assignment_id | student_id | due_date | professor      | assignment_topic          | classroom | grade | relevant_reading   | professor_email    |
 |---------------|------------|----------|----------------|---------------------------|-----------|-------|--------------------|--------------------|
 | 1             | 1          | 23.02.21 | Melvin         | Data normalization        | WWH 101   | 80    | Deumlich Chapter 3 | l.melvin@foo.edu   |
@@ -25,16 +27,17 @@ The dataset likely violates 3NF due to transitive dependencies present. Specific
 ### 4NF Non-Compliance:
 The dataset displays multi-valued dependencies, notably between assignments and readings, and between professors and assignments. These dependencies are independent of each other and do not rely on a singular primary key, contravening the core stipulation of 4NF that mandates the absence of non-trivial multi-valued dependencies in the table structure.
 
+## Tables containing the 4NF-compliant version of the data set
 
 ### Student Table
 
-| Student_ID |
-|------------|
-| 1          |
-| 2          |
-| 4          |
-| 7          |
-| ...        |
+| Student_ID | Student Email |
+|------------| --------------|
+| 1          | ...           |
+| 2          | ...           |
+| 4          | ...           |
+| 7          | ...           |
+| ...        | ...           |
 
 ### Professor Table
 
@@ -73,7 +76,6 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 ### Reading Table
 
-|### Reading Table
 
 | Reading_ID | Title                  | Assignment_ID |
 |------------|------------------------|---------------|
@@ -85,13 +87,13 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 ### Assignment Table
 
-| Assignment_ID | Assignment_Topic                   | Due_Date |
-|---------------|------------------------------------|----------|
-| 1             | Data normalization                 | 23.02.21 |
-| 2             | Single table queries               | 18.11.21 |
-| 4             | Spreadsheet aggregate functions    | 04.07.21 |
-| 5             | Python and pandas                  | 05.05.21 |
-| ...           | ...                                | ...      |
+| Assignment_ID | Assignment_Topic                   | Due_Date | Section ID|
+|---------------|------------------------------------|----------|           |
+| 1             | Data normalization                 | 23.02.21 | ...       |
+| 2             | Single table queries               | 18.11.21 |           |
+| 4             | Spreadsheet aggregate functions    | 04.07.21 |           |
+| 5             | Python and pandas                  | 05.05.21 |           |
+| ...           | ...                                | ...      |           |
 
 ### Student_Assignment Table
 
@@ -103,3 +105,7 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 | 2          | 5             | 92                       |
 | 2          | 4             | 65                       |
 | ...        | ...           | ...                      |
+
+## The ER diagram you created of your 4NF-compliant version of the data set
+
+## Description of what changes you made and how these changes make the data 4NF-compliant
