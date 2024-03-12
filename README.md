@@ -33,10 +33,10 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 | Student_ID | Student Email |
 |------------| --------------|
-| 1          | ...           |
-| 2          | ...           |
-| 4          | ...           |
-| 7          | ...           |
+| 1          | mdumbare2@nyu.edu   |
+| 2          | mbywaters7@nyu.edu  |
+| 4          | gbranscombv@nyu.edu |
+| 7          | jmabbs8u@nyu.edu  |
 | ...        | ...           |
 
 ### Professor Table
