@@ -56,6 +56,7 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 |-----------|--------------------|
 | 1         | Database and Design|
 | 2         | SQL and Design     |
+| 3         | Excel and Spreadsheets|
 | ...       | ...                |
 
 ### Section Table
