@@ -19,10 +19,10 @@ The contents of this file will be deleted and replaced with the content describe
 ## Non-Compliance with Normal Forms
 
 ### 2NF Non-Compliance:
-The original dataset's compliance with 2NF is contingent upon the identification of a composite key. Assuming a combination of `assignment_id` and `student_id` could serve as such, the dataset does not exhibit clear partial dependencies, which are typical indicators of 2NF violation. However, the lack of an explicit composite key in the given structure means this dataset's alignment with 2NF remains largely theoretical.
+The original dataset's compliance with 2NF depends upon the identification of a composite key. Assuming a combination of `assignment_id` and `student_id` could serve as such, the dataset does not exhibit clear partial dependencies, which are typical indicators of 2NF violation. So as there is no composite primary key it is unlikely that this dataset violates 2NF, however no primary keys are specified. 
 
 ### 3NF Non-Compliance:
-The dataset likely violates 3NF due to transitive dependencies present. Specifically, attributes such as `professor_email` are dependent on `professor`, which in turn is dependent on `assignment_id`, illustrating a classic transitive dependency scenario. This undermines the requirement that all non-key attributes must be directly dependent on the primary key alone, without any intermediary attributes.
+The dataset likely violates 3NF due to transitive dependencies present. Specifically, attributes such as `professor_email` are dependent on `professor`, which in turn is dependent on `assignment_id`, this is a classic transitive dependency scenario. This violates the requirement that all non-key attributes must be directly dependent on the primary key alone, without any intermediary attributes.
 
 ### 4NF Non-Compliance:
 The dataset displays multi-valued dependencies, notably between assignments and readings, and between professors and assignments. These dependencies are independent of each other and do not rely on a singular primary key, contravening the core stipulation of 4NF that mandates the absence of non-trivial multi-valued dependencies in the table structure.
@@ -124,3 +124,5 @@ Then a section table with a section id and what professor is teaching it along w
 A classroom table with IDs with the classroom’s name. A reading table that includes all the recommended readings and their associated assignments. An assignment table that contains the due date of the assignment and what section it is associated with.
 
 Along with finally a student assignment grading table where the student ID and Assignment ID is used as a composite primary key to match them with their assignment grade.
+
+When we turn it into an actual table we use foreign keys to represent all the relationships shown in the ERD.
