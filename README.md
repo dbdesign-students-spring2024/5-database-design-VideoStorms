@@ -2,8 +2,6 @@
 
 An assignment to normalize the structure of data and establish a set of Entity-Relationship Diagrams for the data.
 
-The contents of this file will be deleted and replaced with the content described in the [instructions](./instructions.md)
-
 ## Table containing the original data set
 
 | assignment_id | student_id | due_date | professor      | assignment_topic          | classroom | grade | relevant_reading   | professor_email    |
