@@ -97,7 +97,7 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 | ...           | ...                                | ...      | ...        |
 
 
-### Student_Assignment Table
+### Student Assignment Grading Table
 
 | Student_ID | Assignment_ID | Student_Assignment_Grade |
 |------------|---------------|--------------------------|
@@ -111,3 +111,11 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 ## The ER diagram you created of your 4NF-compliant version of the data set
 
 ## Description of what changes you made and how these changes make the data 4NF-compliant
+
+The changes we made was we took the original table and split it into 8 separate tables that have relationships with each other. Making sure all the tables have non-key fields that must provide a fact about the entity uniquely identified by the primary key. Also making sure that the new tables don’t contain a non-key field is a fact about another non-key field and finally making sure that each record does not contain more than one independent multi-valued fact about an entity. 
+We have tables of all the students and professors and their respective emails. 
+So, we made a table with the professor IDs that conforms to 4NF also a course table with course ID. 
+Then a section table with a section id and what professor is teaching it along with what course is being taught along with what classroom it is being taught it. 
+A classroom table with IDs with the classroom’s name. A reading table that includes all the recommended readings and their associated assignments. An assignment table that contains the due date of the assignment and what section it is associated with.
+
+Along with finally a student assignment grading table where the student ID and Assignment ID is used as a composite primary key to match them with their assignment grade.
