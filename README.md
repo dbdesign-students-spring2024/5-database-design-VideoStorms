@@ -52,17 +52,19 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 
 
-| Course_ID | Course_Name |
-|-----------|-------------|
-| ...       | ...         |
+| Course_ID | Course_Name        |
+|-----------|--------------------|
+| 1         | Database and Design|
+| 2         | SQL and Design     |
+| ...       | ...                |
 
 ### Section Table
 
 | Section_ID | Professor_ID | Course_ID | Classroom_ID |
 |------------|--------------|-----------|--------------|
 | 1          | 1            | 1         | 1            |
-| 2          | 1            | 1         | 2            |
-| 3          | 2            | 2         | 3            |
+| 2          | 2            | 2         | 2            |
+| 3          | 3            | 3         | 3            |
 | ...        | ...          | ...       | ...          |
 
 ### Classroom Table
@@ -90,10 +92,10 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 | Assignment_ID | Assignment_Topic                   | Due_Date | Section_ID |
 |---------------|------------------------------------|----------|------------|
-| 1             | Data normalization                 | 23.02.21 | ...        |
-| 2             | Single table queries               | 18.11.21 | ...        |
-| 4             | Spreadsheet aggregate functions    | 04.07.21 | ...        |
-| 5             | Python and pandas                  | 05.05.21 | ...        |
+| 1             | Data normalization                 | 23.02.21 | 1          |
+| 2             | Single table queries               | 18.11.21 | 2          |
+| 4             | Spreadsheet aggregate functions    | 04.07.21 | 3          |
+| 5             | Python and pandas                  | 05.05.21 | 2          |
 | ...           | ...                                | ...      | ...        |
 
 
