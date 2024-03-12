@@ -110,6 +110,8 @@ The dataset displays multi-valued dependencies, notably between assignments and 
 
 ## The ER diagram you created of your 4NF-compliant version of the data set
 
+![ER diagram you created of your 4NF-compliant](https://github.com/dbdesign-students-spring2024/5-database-design-VideoStorms/blob/master/images/ER%20Diagram.svg)
+
 ## Description of what changes you made and how these changes make the data 4NF-compliant
 
 The changes we made was we took the original table and split it into 8 separate tables that have relationships with each other. Making sure all the tables have non-key fields that must provide a fact about the entity uniquely identified by the primary key. Also making sure that the new tables don’t contain a non-key field is a fact about another non-key field and finally making sure that each record does not contain more than one independent multi-valued fact about an entity. 
